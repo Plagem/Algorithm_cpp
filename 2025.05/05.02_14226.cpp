@@ -5,7 +5,7 @@ using namespace std;
 
 // 현재 이모티콘 개수, 현재 시간, 현재 클립보드 내 이모티콘 개수
 queue<tuple<int, int, int>> q;
-int visited[2001][2001];
+bool visited[2001][2001];
 int n;
 
 int main()
@@ -42,7 +42,7 @@ int main()
             visited[curImot+curCopy][curCopy] = true;
         }
 
-        if(curImot-1 >= 1 && !visited[curImot-1])
+        if(curImot-1 >= 1 && !visited[curImot-1][curCopy])
         {
             q.push(make_tuple(curImot-1, curTime+1, curCopy));
             visited[curImot-1][curCopy] = true;
