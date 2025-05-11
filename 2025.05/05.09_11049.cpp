@@ -8,7 +8,7 @@ pair<int, int> matrix[501];
 
 void input()
 {
-    fill(&dp[0][0], &dp[501][501], 1e9);
+    fill(&dp[1][1], &dp[500][500], 1e9);
     cin >> n;
     for(int i = 1; i <= n; i++)
     {
@@ -30,10 +30,6 @@ int main()
         for(int j = 1; j + i <= n; j++)
         {
             int start = j; int end = j+i;
-            if(end > n)
-            {
-                cout << "kj";
-            }
             // k는 중간점
             for(int k = 0; k < i; k++)
             {
