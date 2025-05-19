@@ -29,7 +29,6 @@ void rpaper(int x1, int y1, int x2, int y2)
         }
         else
         {
-            //cout << "(" << x1 << ", " << y1 << ")" << "to " <<  "(" << x2 << ", " << y2 << ")" << endl;
             blue++;
         }
     }
