@@ -19,5 +19,5 @@ int main()
         }
     }
 
-    cout << sol;
+    cout << 1 + sol/2;
 }
