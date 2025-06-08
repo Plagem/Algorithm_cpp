@@ -15,7 +15,7 @@ int main()
     }
 
     long long start = 1;
-    long long end = 1000000 * 1000000;
+    long long end = 1000000000000;
     while(start <= end)
     {
         long long mid = (start + end) / 2;
