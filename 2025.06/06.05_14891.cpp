@@ -10,11 +10,9 @@ bool visited[4];
 void turn(int chainNum, int isClockwise)
 {
     visited[chainNum] = true;
-    //cout << "turn" << chainNum << endl;
     
     if(chainNum+1 < 4 && !visited[chainNum+1])
     {
-        //cout << "chains[" << chainNum << "][2] : " << chains[chainNum][2] << ", chains[" << chainNum+1 << "][6] : " << chains[chainNum+1][6] << endl;
         if(chains[chainNum][2] != chains[chainNum+1][6])
         {
             turn(chainNum+1, -isClockwise);
@@ -22,7 +20,6 @@ void turn(int chainNum, int isClockwise)
     }
     if(chainNum-1 >= 0 && !visited[chainNum-1])
     {
-        //cout << "chains[" << chainNum-1 << "][6] : " << chains[chainNum-1][6] << ", chains[" << chainNum << "][2] : " << chains[chainNum][2] << endl;
         if(chains[chainNum-1][2] != chains[chainNum][6])
         {
             turn(chainNum-1, -isClockwise);
@@ -50,19 +47,6 @@ void turn(int chainNum, int isClockwise)
     }
 }
 
-void print()
-{
-    cout << endl;
-    for(int i = 0; i < 4; i++)
-    {
-        for(int j = 0; j < 8; j++)
-        {
-            cout << chains[i][j];
-        }
-        cout << endl;
-    }
-}
-
 int main()
 {
     for(int i = 0; i < 4; i++)
@@ -85,7 +69,6 @@ int main()
         int t1, t2;
         cin >> t1 >> t2;
         turn(t1-1, t2);
-        //print();
     }
 
     int sol = 0;
@@ -95,3 +78,4 @@ int main()
     }
     cout << sol;
 }
+
