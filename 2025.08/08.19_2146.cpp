@@ -80,6 +80,9 @@ int bfs(int islandNum, int x, int y)
 
 int main()
 {
+    ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
     cin >> n;
     for(int i = 0; i < n; i++)
     {
